@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🤘 Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="./app.css"></link>
+</head>
+<body>
+<header>
+    <div class="headerTop">
+        <div class="customContainer p-4">
+            <div class="row">
+                <div class="col col-md-6 col-sm-12">
+                    <div class="logoOuter d-flex align-items-center justify-content-center h-10">
+                        <img class="img-fluid" src="handLogo.png" alt="Hand logo">
+                        <span class="align-self-center">Dashboard</span>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-sm-12 d-flex justify-content-center">
+                    <div class="dateOuter">
+                        <span class="hour"></span>
+                        <span class="date"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="headerBottom">
+        <div class="customContainer p-2">
+            <h1 class="p-4">Stats</h1>
+        </div>
+    </div>
+</header>
+
+<main class="container-fluid">
+    <div class="customContainer p-4">
+        <div class="row" id="app">
+            <script id="ListItem" type="template/handlebars">
+                <div class="col col-md-4 col-sm-12">
+                    <div class="block">
+                        <div class="row">
+                            <h3 class="blockTitle">{{name}}</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col col-md-4 col-sm-12">
+                                <h3 class="title">CPU</h3>
+                                <span class="status {{#if cpu}}ok{{/if}}" >{{cpu}}</span>
+                                <span class="details"><span>0</span>/<span>2</span></span>
+                            </div>
+                            <div class="col col-md-4 col-sm-12">
+                                <h3 class="title">MEM</h3>
+                                <span class="status {{#if mem_free}}ok{{/if}}">{{mem_free}}</span>
+                                <span class="details">3h20m</span>
+                            </div>
+                            <div class="col col-md-4 col-sm-12">
+                                <h3 class="title">DISK</h3>
+                                <span class="status {{#if disk_avail}}ok{{/if}}">{{disk_avail}}</span>
+                                <span class="details"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </script>
+        </div>
+    </div>
+</main>
+
+<script id="List" type="template/handlebars">
+    {{#each items}}
+    {{> ListItem}}
+    {{/each}}
+</script>
+<script src="./app.js"></script>
+<script type="text/javascript">
+    require('src/demo/handlebars');
+</script>
+</body>
+</html>

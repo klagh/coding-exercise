@@ -1,0 +1,34 @@
+{
+  "name": "dashboard-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "brunch watch --server",
+    "build": "brunch build -p"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "auto-reload-brunch": "^2.7.1",
+    "autoprefixer": "^6",
+    "babel-brunch": "^6",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "brunch": "^2",
+    "brunch-typescript": "^2.1.0",
+    "lost": "^8.2.0",
+    "sass-brunch": "^2",
+    "showdown": "^1.8.2",
+    "spostcss-brunch": "^1.0.1",
+    "typescript": "^2.6.1",
+    "uglify-js-brunch": "^2"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^4.1.1",
+    "handlebars": "^4.0.11",
+    "jquery": "^3.2.1"
+  }
+}
